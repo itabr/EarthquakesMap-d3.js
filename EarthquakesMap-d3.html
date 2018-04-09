@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EarthquakesMap-d3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css"
+  />
+</head>
+<style>
+  body {
+    background-color: white;
+  }
+
+  svg {
+    border: 2px solid black;
+    background-color: #D8F6FF;
+    margin: 20px auto 0px;
+    display: block;
+  }
+
+  div {
+    width: 1255px;
+    margin: 5px auto 5px auto;
+    color: black;
+  }
+
+  h3,
+  h2 {
+    font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    overflow: scroll;
+    height: 240px;
+  }
+
+  li {
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
+    color: black;
+
+  }
+
+  li:last-child {
+    border: none;
+    color: black;
+  }
+
+  li a {
+    text-decoration: none;
+    color: black;
+
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+    display: block;
+    width: 1255px;
+  }
+
+  li a:hover {
+    font-size: 30px;
+    background: white;
+  }
+
+  .btn {
+    border: 3px solid black;
+    background-color: dodgerblue;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .default {
+    border-color: #2196F3;
+    color: white
+  }
+
+  .default:hover {
+    border-color: #135A91;
+    background: #135A91;
+    color: white;
+  }
+
+  .boundary {
+    fill: none;
+    stroke: white;
+    stroke-width: 0.5;
+  }
+
+  .land {
+    fill: #BDBDBD;
+    stroke: #717171;
+  }
+</style>
+<body>
+  <a href="https://github.com/itabr/EarthquakesMap-d3.js">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+      alt="Fork me on GitHub">
+  </a>
+  <div>
+    <button class="btn default" onclick="FindLoc()">
+      <b>Find Me on the map</b>
+    </button>
+  </div>
+  <script src="EarthquakesMap-d3.js"></script>
+  <div>
+    <h2> List of earthquakes in the past 24hr</h2>
+    <ul id="ListEarthquakes">
+    </ul>
+  </div>
+</body>
+
+</html>
